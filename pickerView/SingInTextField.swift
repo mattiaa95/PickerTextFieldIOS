@@ -15,13 +15,23 @@ class SingInTextField: SingInTextFieldUIVIew, UIPickerViewDelegate, UIPickerView
     
     @IBInspectable var titleText: String = "Title"
     @IBInspectable var placeholderText: String = "Placeholder"
+    @IBInspectable var isDatePicker: Bool = false
     
     var myPickerView : UIPickerView!
+    var datePicker = UIDatePicker()
     var pickerData = ["Picker 1" , "Picker 2" , "Picker 3" , "Picker 4","Picker 5","Picker 6"]
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         setup()
+    }
+    
+    func loadViewFromNib() -> UIView! {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! SingInTextFieldUIVIew
+        
+        return view
     }
     
     func setup() {
@@ -41,7 +51,7 @@ class SingInTextField: SingInTextFieldUIVIew, UIPickerViewDelegate, UIPickerView
         
         //---
         let tapGesture = UITapGestureRecognizer(target: self.view.superview, action: #selector(self.dismissKeyboard (_:)))
-        self.view.superview?.addGestureRecognizer(tapGesture)
+        self.view.superview?.superview?.addGestureRecognizer(tapGesture)
     }
     
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
@@ -97,29 +107,57 @@ class SingInTextField: SingInTextFieldUIVIew, UIPickerViewDelegate, UIPickerView
     //MARK:- TextFiled Delegate
     
      func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.pickUp(view.textField)
+        if(isDatePicker){
+            self.showDatePicker()
+        }else{
+            self.pickUp(view.textField)
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        var pickerValue = true
-        
-        for posiblepick in pickerData {
-            if(textField.text == posiblepick){
-                pickerValue = false
+        if(!isDatePicker){
+            var pickerValue = true
+            
+            for posiblepick in pickerData {
+                if(textField.text == posiblepick){
+                    pickerValue = false
+                }
+            }
+            
+            if pickerValue {
+                textField.text = ""
             }
         }
+    }
+ 
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .date
         
-        if pickerValue {
-            textField.text = ""
-        }
+        //ToolBar
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+        
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+        
+        self.view.textField.inputAccessoryView = toolbar
+        self.view.textField.inputView = datePicker
         
     }
     
-    func loadViewFromNib() -> UIView! {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! SingInTextFieldUIVIew
+    @objc func donedatePicker(){
         
-        return view
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        self.view.textField.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
     }
+    
+    @objc func cancelDatePicker(){
+        self.view.endEditing(true)
+    }
+    
 }
