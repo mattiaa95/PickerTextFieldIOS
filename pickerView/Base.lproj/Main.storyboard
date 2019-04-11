@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,45 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pickerView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-9G-ark" customClass="SingInTextField" customModule="pickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="112" width="414" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="hZe-yV-y3y"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrY-JZ-xux" customClass="SingInTextField" customModule="pickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="278" width="414" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="yjE-QU-3pZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-qc-hye" customClass="SingInTextField" customModule="pickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="426" width="414" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="MA4-VU-KBi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Loc-qc-hye" firstAttribute="top" secondItem="vrY-JZ-xux" secondAttribute="bottom" constant="20" id="3i1-1z-oUh"/>
+                            <constraint firstItem="Loc-qc-hye" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="D3M-2N-0lQ"/>
+                            <constraint firstItem="vrY-JZ-xux" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="HCM-zT-cbh"/>
+                            <constraint firstItem="vrY-JZ-xux" firstAttribute="top" secondItem="Qf0-9G-ark" secondAttribute="bottom" constant="38" id="RCo-gK-gu3"/>
+                            <constraint firstItem="Qf0-9G-ark" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="S4W-za-sr8"/>
+                            <constraint firstItem="Loc-qc-hye" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="T4p-fY-uqp"/>
+                            <constraint firstItem="Qf0-9G-ark" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="VrH-LL-7Hg"/>
+                            <constraint firstItem="vrY-JZ-xux" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="drP-5b-R2J"/>
+                            <constraint firstItem="Qf0-9G-ark" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jAt-Jc-8PN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4987B932225F2DF700F30B92 /* SingInTextFieldUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987B92F225F2DF600F30B92 /* SingInTextFieldUIVIew.swift */; };
+		4987B933225F2DF700F30B92 /* SingInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987B930225F2DF700F30B92 /* SingInTextField.swift */; };
+		4987B934225F2DF700F30B92 /* SingInTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4987B931225F2DF700F30B92 /* SingInTextField.xib */; };
 		498D79C0225E421100DED1DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D79BF225E421100DED1DA /* AppDelegate.swift */; };
 		498D79C2225E421200DED1DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D79C1225E421200DED1DA /* ViewController.swift */; };
 		498D79C5225E421200DED1DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498D79C3225E421200DED1DA /* Main.storyboard */; };
 		498D79C7225E421400DED1DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498D79C6225E421400DED1DA /* Assets.xcassets */; };
 		498D79CA225E421400DED1DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498D79C8225E421400DED1DA /* LaunchScreen.storyboard */; };
-		498D79D5225E421500DED1DA /* pickerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D79D4225E421500DED1DA /* pickerViewTests.swift */; };
-		498D79E0225E421500DED1DA /* pickerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D79DF225E421500DED1DA /* pickerViewUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4987B92F225F2DF600F30B92 /* SingInTextFieldUIVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingInTextFieldUIVIew.swift; sourceTree = "<group>"; };
+		4987B930225F2DF700F30B92 /* SingInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingInTextField.swift; sourceTree = "<group>"; };
+		4987B931225F2DF700F30B92 /* SingInTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingInTextField.xib; sourceTree = "<group>"; };
 		498D79BC225E421100DED1DA /* pickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		498D79BF225E421100DED1DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		498D79C1225E421200DED1DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,11 +46,7 @@
 		498D79C9225E421400DED1DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		498D79CB225E421400DED1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498D79D0225E421500DED1DA /* pickerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pickerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		498D79D4225E421500DED1DA /* pickerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickerViewTests.swift; sourceTree = "<group>"; };
-		498D79D6225E421500DED1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498D79DB225E421500DED1DA /* pickerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pickerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		498D79DF225E421500DED1DA /* pickerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickerViewUITests.swift; sourceTree = "<group>"; };
-		498D79E1225E421500DED1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				498D79BE225E421100DED1DA /* pickerView */,
-				498D79D3225E421500DED1DA /* pickerViewTests */,
-				498D79DE225E421500DED1DA /* pickerViewUITests */,
 				498D79BD225E421100DED1DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +95,9 @@
 		498D79BE225E421100DED1DA /* pickerView */ = {
 			isa = PBXGroup;
 			children = (
+				4987B930225F2DF700F30B92 /* SingInTextField.swift */,
+				4987B92F225F2DF600F30B92 /* SingInTextFieldUIVIew.swift */,
+				4987B931225F2DF700F30B92 /* SingInTextField.xib */,
 				498D79BF225E421100DED1DA /* AppDelegate.swift */,
 				498D79C1225E421200DED1DA /* ViewController.swift */,
 				498D79C3225E421200DED1DA /* Main.storyboard */,
@@ -105,24 +106,6 @@
 				498D79CB225E421400DED1DA /* Info.plist */,
 			);
 			path = pickerView;
-			sourceTree = "<group>";
-		};
-		498D79D3225E421500DED1DA /* pickerViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				498D79D4225E421500DED1DA /* pickerViewTests.swift */,
-				498D79D6225E421500DED1DA /* Info.plist */,
-			);
-			path = pickerViewTests;
-			sourceTree = "<group>";
-		};
-		498D79DE225E421500DED1DA /* pickerViewUITests */ = {
-			isa = PBXGroup;
-			children = (
-				498D79DF225E421500DED1DA /* pickerViewUITests.swift */,
-				498D79E1225E421500DED1DA /* Info.plist */,
-			);
-			path = pickerViewUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498D79CA225E421400DED1DA /* LaunchScreen.storyboard in Resources */,
+				4987B934225F2DF700F30B92 /* SingInTextField.xib in Resources */,
 				498D79C7225E421400DED1DA /* Assets.xcassets in Resources */,
 				498D79C5225E421200DED1DA /* Main.storyboard in Resources */,
 			);
@@ -257,6 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				498D79C2225E421200DED1DA /* ViewController.swift in Sources */,
+				4987B933225F2DF700F30B92 /* SingInTextField.swift in Sources */,
+				4987B932225F2DF700F30B92 /* SingInTextFieldUIVIew.swift in Sources */,
 				498D79C0225E421100DED1DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				498D79D5225E421500DED1DA /* pickerViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +258,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				498D79E0225E421500DED1DA /* pickerViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
